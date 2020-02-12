@@ -106,9 +106,23 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   padding: 2em;
   color: black;
-  height: 100%;
   font-weight: 700;
+  display: flex;
+  justify-content: center;
 }
+
+header,
+footer,
+main {
+  display: flex;
+  justify-content: center;
+
+}
+
+main{
+  border-bottom: 1px solid #555;
+}
+
 
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
@@ -116,9 +130,10 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-flow: row wrap;
+  max-width: 1200px;
 }
 
-.div-1, .div-2, .div-3 {
+.divs{
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
   display: flex;
   justify-content: center;
@@ -126,15 +141,41 @@ body {
   color: #fff;
   line-height: 1.5em;
   font-size: 1.3em;
-  background-color: black;
-  height: auto;
+
 }
 
-.wrapper p{
+#div-1,
+#div-2,
+#div-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  line-height: 1.5em;
+  font-size: 1.25em;
+
+}
+
+#div-1, #div-2{
+  border-bottom:  1px solid #555;
+}
+
+.wrapper h1{
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.3em;
+  font-size: 4em;
+  color: #fff;
+
 }
 
+.wrapper main p{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.7em;
+  color: #fff;
+}
+
+footer i {
+  padding: 30px 20px 0 0;
+}
 
 
 
@@ -218,14 +259,17 @@ body {
    Modify as content requires.
    ========================================================================== */
 
-   @media all and (min-width: 1200px) {
-       .div-1, .div-2, .div-3 {
+   @media (min-width: 768px) {
+       .divs {
          flex-basis: 30%;
+         border-bottom: none;
        }
 
-       .div-1, .div-2 {
+       #div-1, #div-2 {
+
          border-right: 1px solid #555;
          padding-right: 30px;
+         border-bottom: none;
        }
    }
 
